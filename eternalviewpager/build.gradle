@@ -1,0 +1,29 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
+
+android {
+    compileSdkVersion rootProject.ext.sdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion rootProject.ext.sdkVersion
+        versionCode 1
+        versionName "1.0"
+    }
+}
+
+dependencies {
+    implementation "com.android.support:appcompat-v7:$supportLibVersion"
+}
+
+// $ ./gradlew clean build bintrayUpload -PbintrayUser=star-zero -PbintrayKey=BINTRAY_KEY -PdryRun=false
+publish {
+    userOrg = 'star-zero'
+    groupId = 'com.star_zero'
+    artifactId = 'eternalviewpager'
+    publishVersion = '1.0.0'
+    licences = ['Apache-2.0']
+    desc = 'Android ViewPager with infinite/looping scroll'
+    website = 'https://github.com/STAR-ZERO/EternalViewPager'
+}
