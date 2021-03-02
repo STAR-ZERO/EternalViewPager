@@ -1,3 +1,7 @@
+# DEPRECATED
+
+This repository is no longer maintained.
+
 # EternalViewPager
 
 [ ![Download](https://api.bintray.com/packages/star-zero/maven/eternalviewpager/images/download.svg) ](https://bintray.com/star-zero/maven/eternalviewpager/_latestVersion)
